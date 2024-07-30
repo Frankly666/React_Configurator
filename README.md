@@ -39,7 +39,7 @@ npx create-component ts MyComponent ./src/components
 
 // 成功后终端输出
 Component index.tsx created successfully at src\components\MyComponent\index.tsx,
-  Component style.ts created successfully at src\components\MyComponent\style.ts
+Component style.ts created successfully at src\components\MyComponent\style.ts
 ```
 
 ![split](https://github.com/terkelg/prompts/raw/master/media/split.png)
