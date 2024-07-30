@@ -8,7 +8,7 @@ interface IProps {
 }
 
 const COMPONENT_NAME: FC<IProps> = () => {
-  return <COMPONENT_NAMEWrapper>{COMPONENT_NAME}</COMPONENT_NAMEWrapper>;
+  return <COMPONENT_NAMEWrapper>COMPONENT_NAME</COMPONENT_NAMEWrapper>;
 };
 
 export default memo(COMPONENT_NAME);

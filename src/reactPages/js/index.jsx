@@ -1,7 +1,8 @@
-import React, { memo, Suspense } from "react";
+import React, { memo } from "react";
+import COMPONENT_NAMEWrapper from "./style";
 
-const App = memo(() => {
-  return <div className="app"></div>;
+const COMPONENT_NAME = memo(() => {
+  return <COMPONENT_NAMEWrapper>COMPONENT_NAME</COMPONENT_NAMEWrapper>;
 });
 
-export default App;
+export default COMPONENT_NAME;
