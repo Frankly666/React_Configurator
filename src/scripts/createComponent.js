@@ -3,7 +3,7 @@ import * as path from 'path';
 
 // 解析命令行参数
 const args = process.argv.slice(2);
-const extension = args[0] === 'tsx' ? '.tsx' : '.ts';
+const extension = args[0];
 const componentName = args[1];
 const outputDir = args[2] || './src/components'; // 默认输出目录
 

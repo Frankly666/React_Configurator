@@ -7,6 +7,9 @@
     "build": "tsc",
     "start": "ts-node src/index.ts"
   },
+  "bin": {
+    "create-component": "./scripts/createComponent.js"
+  },
   "author": "",
   "license": "ISC",
   "description": "",
