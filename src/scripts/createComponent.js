@@ -37,8 +37,14 @@ let fileName2 =
 // 读取模板文件
 componentTemplatePath = path.join(__dirname, fileName1);
 styleTemplatePath = path.join(__dirname, fileName2);
-componentTemplateContent = fs.readFileSync(componentTemplatePath, "utf8");
-styleTemplateContent = fs.readFileSync(styleTemplatePath, "utf-8");
+// 读取模板文件
+try {
+  componentTemplateContent = fs.readFileSync(componentTemplatePath, "utf8");
+  styleTemplateContent = fs.readFileSync(styleTemplatePath, "utf8");
+} catch (err) {
+  console.error("读取模板文件时出错：", err);
+  process.exit(1);
+}
 
 // 替换模板中的COMPONENT_NAME占位符
 const componentContent = componentTemplateContent.replace(
