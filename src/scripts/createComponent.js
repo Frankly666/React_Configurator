@@ -1,5 +1,5 @@
-import * as fs from "fs";
-import * as path from "path";
+const fs = require('fs');
+const path = require('path');
 
 // 解析命令行参数
 const args = process.argv.slice(2);
@@ -57,16 +57,15 @@ const styleContent = styleTemplateContent.replace(
 );
 
 // 构建输出文件路径
-const componentOutputPath = path.join(outputDir, `index.${extension}x`);
-const styleOutputPath = path.join(outputDir, `style.${extension}`);
+const rootOutputPathDir = path.join(outputDir, `${componentName}`);
+const componentOutputPath = path.join(rootOutputPathDir, `index.${extension}x`);
+const styleOutputPath = path.join(rootOutputPathDir, `style.${extension}`);
 
 // 确保输出目录存在
-if (!fs.existsSync(componentOutputPath)) {
-  fs.mkdirSync(componentOutputPath, { recursive: true });
+if (!fs.existsSync(rootOutputPathDir)) {
+  fs.mkdirSync(rootOutputPathDir, { recursive: true });
 }
-if (!fs.existsSync(styleOutputPath)) {
-  fs.mkdirSync(styleOutputPath, { recursive: true });
-}
+
 
 // 写入文件
 fs.writeFileSync(componentOutputPath, componentContent, "utf8");
