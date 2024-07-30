@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import type { FC, ReactNode } from "react";
 
-import COMPONENT_NAMEWrapper from "./style.ts";
+import COMPONENT_NAMEWrapper from "./style";
 
 interface IProps {
   children?: ReactNode;
