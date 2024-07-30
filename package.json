@@ -8,8 +8,14 @@
     "start": "ts-node src/index.ts"
   },
   "bin": {
-    "create-component": "./scripts/createComponent.js"
+    "create-component": "./src/scripts/createComponent.js"
   },
+  "files": [
+    "src/",
+    "package.json",
+    "README.md",
+    "tsconfig.json"
+  ],
   "author": "",
   "license": "ISC",
   "description": "",
