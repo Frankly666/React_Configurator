@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
@@ -32,7 +34,7 @@ let fileName1 =
 let fileName2 =
   extension === "ts"
     ? "../reactPages/ts/style.ts"
-    : "../reactPages/ts/style.js";
+    : "../reactPages/js/style.js";
 
 // 读取模板文件
 componentTemplatePath = path.join(__dirname, fileName1);
